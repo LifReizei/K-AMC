@@ -1,0 +1,71 @@
+{
+  "id": "anime-master-calendar",
+  "name": "Anime Master Calendar",
+  "version": "3.0.1",
+  "apiVersion": 11,
+  "author": "LifReizei",
+  "description": "Calendario semanal de estrenos. Mira qué sale hoy y elige verlo Directo (AnimeAV1) o por Torrent (Nyaa).",
+  "langs": ["es", "en"],
+  "nsfw": false,
+  "entry": "plugin.js",
+  "color": "#FF9800",
+  "categories": ["anime"],
+  "section": {
+    "label": "Anime Master"
+  },
+  "hosts": [
+    "graphql.anilist.co",
+    "animeav1.com",
+    "cdn.animeav1.com",
+    "voe.sx",
+    "*.voe.sx",
+    "mp4upload.com",
+    "*.mp4upload.com",
+    "nyaa.si",
+    "*.uns.bio",
+    "streamtape.com",
+    "tapecontent.net"
+  ],
+  "streamHosts": "any",
+  "capabilities": [
+    "home",
+    "search",
+    "episodes",
+    "resolve",
+    "action",
+    "browse"
+  ],
+  "externalResolver": {
+    "package": "com.kino.torcino"
+  },
+  "settings": [
+    {
+      "key": "external_app",
+      "label": "App para abrir Torrents",
+      "type": "select",
+      "default": "com.kino.torcino",
+      "options": [
+        { "value": "com.kino.torcino", "label": "Torcino" },
+        { "value": "mv.magnettv", "label": "Magnet Player" },
+        { "value": "org.proninyaroslav.libretorrent", "label": "LibreTorrent" }
+      ]
+    },
+    {
+      "key": "idioma",
+      "label": "Idioma para AnimeAV1",
+      "type": "select",
+      "default": "sub",
+      "options": [
+        { "value": "sub", "label": "Subtitulado" },
+        { "value": "dub", "label": "Latino" }
+      ]
+    },
+    {
+      "key": "clear_internal",
+      "type": "action",
+      "label": "Vaciar lista y progreso",
+      "confirm": "¿Borrar todas tus series y capítulos vistos?"
+    }
+  ],
+  "icon": "icon.png"
+}
