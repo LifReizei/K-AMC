@@ -32,8 +32,7 @@
     "search",
     "episodes",
     "resolve",
-    "action",
-    "browse"
+    "action"
   ],
   "externalResolver": {
     "package": "com.kino.torcino"
