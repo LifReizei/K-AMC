@@ -27,7 +27,13 @@
     "tapecontent.net"
   ],
   "streamHosts": "any",
-  "capabilities": ["home", "search", "episodes", "resolve", "externalResolve"],
+  "capabilities": [
+    "home",
+    "search",
+    "episodes",
+    "resolve",
+    "action"
+  ],
   "externalResolver": {
     "package": "com.kino.torcino"
   },
